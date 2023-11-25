@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+  <body>
+    <!-- Dashboard -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="./images/logo2.svg" alt="logo" />
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <span><img src="./images/Time Square.png" alt="Time icon" /></span
+            ><a href="#">Add Reminder</a>
+          </li>
+          <li>
+            <span><img src="./images/Message.png" alt="Time icon" /></span
+            ><a href="#">My Messages</a>
+          </li>
+          <li>
+            <span><img src="./images/Plus.png" alt="Time icon" /></span
+            ><a href="#">Add Caregiver</a>
+          </li>
+        </ul>
+      </div>
+      <button class="logout">Log out</button>
+    </div>
+
+    <div class="main">
+      <div class="header">
+        <div class="header-upper">
+          <h2>Welcome John,</h2>
+          <div class="header-input">
+            <input type="Find Reminders" placeholder="Find Reminders" />
+            <img src="./images/Search.svg" alt="Search icon" />
+          </div>
+          <div class="header-icons">
+            <img src="./images/Notification.svg" alt="Notification icon" />
+            <div class="border">
+              <img src="./images/Profile.svg" alt="Profile icon" />
+            </div>
+          </div>
+        </div>
+
+        <div class="header-down">
+          <div class="header-down-one">
+            <div class="section-one">
+              <div>
+                <h2>John Doe <span>Lagos, Nigeria</span></h2>
+              </div>
+              <div class="email">
+                <p>johndoe@gmail.com</p>
+              </div>
+            </div>
+            <div class="section-two section-one">
+              <p
+                style="
+                  font-size: 16px;
+                  font-style: italic;
+                  font-weight: 400;
+                  line-height: normal;
+                "
+              >
+                Medical Condition
+              </p>
+              <p
+                style="
+                  font-size: 20px;
+                  font-style: italic;
+                  font-weight: 700;
+                  line-height: normal;
+                "
+              >
+                Diabetes
+              </p>
+            </div>
+          </div>
+          <div class="header-down-two">
+            <div>
+              <p>Age: <span>53</span></p>
+            </div>
+            <div>
+              <p>Gender: <span>Male</span></p>
+            </div>
+            <div>
+              <p>Blood group: <span>O+</span></p>
+            </div>
+            <div>
+              <p>Genotype: <span>AA</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="top-content">
+          <p class="first">Upcoming reminders</p>
+          <p>Active members: <span>7</span></p>
+          <p>Completed reminders: <span>23</span></p>
+        </div>
+
+        <div>
+            <p class="content-paragraph">+ Set New Reminder</p>
+            <div class="card" id="cards"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./data/data.js"></script>
+    <script src="./js/Dashboard/dashboard.js"></script>
+  </body>
+</html>
