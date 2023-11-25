@@ -70,7 +70,7 @@ body {
 
 /* General styling for the dashboard content */
 
-.main {
+.dashboard {
   flex: 1;
   padding-left: 250px;
   transition: padding-left 0.5s ease;
@@ -269,7 +269,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
-  background: #fff;
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -340,4 +340,74 @@ body {
   font-weight: 500;
   line-height: normal;
   padding: 4% 0 4% 8%;
+}
+
+
+
+/* Caregiver Dashboard */
+
+.caregiver__header h2 {
+    color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.caregiver__body form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.caregiver__body form .side {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.caregiver__body form .space {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.caregiver__body form input {
+    padding: 10px 20px;
+    border-radius: 8px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #a8a9b4;
+    background: #fff;
+    width: 100%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.caregiver__body form input::placeholder {
+    color: #969696;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.caregiver__body form .top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.caregiver__body form .top label {
+    color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }

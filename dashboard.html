@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="./css/dashboard.css" />
   </head>
   <body>
@@ -16,22 +16,22 @@
         <ul>
           <li>
             <span><img src="./images/Time Square.png" alt="Time icon" /></span
-            ><a href="#">Add Reminder</a>
+            ><a href="#" class="reminder_click"> Add Reminder</a>
           </li>
           <li>
             <span><img src="./images/Message.png" alt="Time icon" /></span
-            ><a href="#">My Messages</a>
+            ><a href="#" class="messages_click">My Messages</a>
           </li>
           <li>
             <span><img src="./images/Plus.png" alt="Time icon" /></span
-            ><a href="#">Add Caregiver</a>
+            ><a href="#" class="caregiver_click">Add Caregiver</a>
           </li>
         </ul>
       </div>
       <button class="logout">Log out</button>
     </div>
 
-    <div class="main">
+    <div class="main dashboard">
       <div class="header">
         <div class="header-upper">
           <h2>Welcome John,</h2>
@@ -105,13 +105,57 @@
         </div>
 
         <div>
-            <p class="content-paragraph">+ Set New Reminder</p>
-            <div class="card" id="cards"></div>
+          <p class="content-paragraph">+ Set New Reminder</p>
+          <div class="card" id="cards"></div>
         </div>
       </div>
     </div>
 
-    <script src="./data/data.js"></script>
+    <div class="main reminder">
+      <div class="header">
+        <h2 style="color: blue">New Reminder</h2>
+      </div>
+    </div>
+
+    <div class="main messages"></div>
+
+    <div class="main caregiver">
+      <div class="caregiver__header">
+        <h2>Add Caregiver</h2>
+      </div>
+      <div class="caregiver__body">
+        <form action="">
+          <div class="side">
+            <div class="top">
+              <label for="firstName">Caregiver First name</label>
+              <input type="text" placeholder="Enter name" />
+            </div>
+
+            <div class="top">
+              <label for="lastName">Caregiver Last name</label>
+              <input type="text" placeholder="Enter name" />
+            </div>
+          </div>
+
+          <div class="space">
+            <div class="top">
+              <label for="email">Email Address</label>
+              <input type="email" placeholder="Enter email" />
+            </div>
+
+            <div class="top">
+              <label for="phone">House Address</label>
+              <input type="text" placeholder="Enter house address" />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="caregiver__footer">
+        <button class="cancel">Cancel</button>
+        <button class="save">Save</button>
+      </div>
+    </div>
+
     <script src="./js/Dashboard/dashboard.js"></script>
   </body>
 </html>
