@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kyc8</title>
+</head>
+
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.container{
+  width: 650px;
+  height: 240px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid rgba(68, 79, 183, 1);
+  border-radius: 6px;
+}
+h3{
+  color: rgba(68, 79, 183, 1);
+  margin-top: 54px;
+}
+
+input{
+  width: 180px;
+  height: 40px;
+  background-color: rgba(68, 79, 183, 1);
+  border: none;
+  margin: 5px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.skip{
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(68, 79, 183, 1);
+  border-radius: 7px;
+  color: black;
+}
+
+
+</style>
+
+<body>
+  <div class="container">
+    <h3>Select how you would like to recieve medication reminders</h3>
+    <input type="submit" class="skip" value="SMS">
+    <input type="submit" class="skip" value="Email" style="background-color: #8b8989;">
+    <br>
+    <input type="submit" value="Proceed to Dashboard">
+  </div>
+</body>
+</html>

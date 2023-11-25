@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kyc6</title>
+</head>
+
+<style>
+  body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.container{
+  width: 500px;
+  height: 300px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid rgba(68, 79, 183, 1);
+  border-radius: 6px;
+}
+h3{
+  color: rgba(68, 79, 183, 1);
+  margin-top: 54px;
+}
+
+input{
+  width: 120px;
+  height: 40px;
+  background-color: rgba(68, 79, 183, 1);
+  border: none;
+  margin: 5px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.skip{
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid rgba(68, 79, 183, 1);
+  border-radius: 7px;
+  color: black;
+}
+
+.text{
+  background-color: #fff;
+  border: #f4f4f4 1px solid;
+  width: 250px;
+}
+
+.text::placeholder{
+  padding-left: 8px;
+  font-style: italic;
+}
+
+</style>
+
+<body>
+  <div class="container">
+    <h3>Do you have any existing medical conditions?</h3>
+    <input type="submit" class="Next" value="Yes, I do">
+    <input type="submit" class="skip" value="No,I don't">
+    <br>
+    <input type="text" class="text" placeholder="Add medical condition here">
+    <br>
+    <input type="submit" class="skip" value="Go Back">
+    <input type="submit" value="Next">
+  </div>
+</body>
+</html>

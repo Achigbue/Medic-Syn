@@ -1,0 +1,147 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.form-box{
+  /* position: relative; */
+  width: 500px;
+  height: 600px;
+  padding: 25px;
+  background-color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+  }
+  
+
+ .form-box .form-value .form{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  img{
+    width: 64px;
+    margin-left: 150px;
+    margin-bottom: 8px;
+  }
+
+  p{
+    text-align: center;
+  }
+
+  h2{
+    font-size: 26px;
+    color: rgba(68, 79, 183, 1);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .inputbox{
+    position: relative;
+    margin: 10px;
+    width: 210px;
+    border: 2px solid black;
+  }
+
+  .inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  input:focus ~ label,
+  input:valid ~ label{
+    top: -5px;
+  }
+
+  .inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: black;
+  }
+
+  .inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: black;
+    font-size: 1.2rem;
+    top: 20px;
+  }
+
+  .log-in{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(68, 79, 183, 1);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    /* padding-top: 10px; */
+  }
+
+  .trans{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid rgba(68, 79, 183, 1);
+    cursor: pointer;
+    color: black;
+  }
+  
+  .google{
+    color: rgba(68, 79, 183, 1);
+    font-size: 16px;
+    padding-right: 6px;
+  }
+
+
+.register{
+ font-size: .9em;
+ color: black;
+ text-align: center;
+ margin: 25px 0 10px; 
+}
+
+.register p a{
+    text-decoration: none;
+    color: rgba(68, 79, 183, 1);
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
