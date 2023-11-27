@@ -1,6 +1,6 @@
 :root {
   --primary-color: #4453b7;
-  --font-family: "Satoshi", sans-serif;
+  --font-family: "Inter", sans-serif;
   --background: #f7f7fb;
 }
 
@@ -77,11 +77,7 @@ body {
   transition: padding-left 0.5s ease;
 }
 
-.reminder {
-  flex: 1;
-  padding-left: 250px;
-  transition: padding-left 0.5s ease;
-}
+
 
 
 
@@ -475,6 +471,12 @@ line-height: normal;
 
 /* Reminder dashboard styling */
 
+.reminder {
+  flex: 1;
+  padding-left: 250px;
+  transition: padding 0.5s ease;
+}
+
 .reminder h2 {
   color: #000;
   font-size: 20px;
@@ -483,9 +485,19 @@ line-height: normal;
   line-height: normal;
 }
 
+.reminder .header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 20px 20px 20px 250px;
+  border-top: 1px solid #e5e5e5;
+  margin-left: 5%;
+}
+
+
 .name__color {
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .reminder__name {
@@ -493,6 +505,33 @@ line-height: normal;
   flex-direction: column;
 }
 
+.reminder__name input {
+  display: inline-flex;
+height: 56px;
+padding: 19px 141px 21px 16px;
+align-items: center;
+flex-shrink: 0;
+border-radius: 4px;
+border: 1px solid #A8A9B4;
+background: #FFF;
+}
+
+.reminder__body {
+  transition: padding 0.5s ease;
+  margin: 4% 4% 0 4%;
+}
+
+
+
+
+.reminder__body form label {
+  color: #000;
+font-family: 'Inter', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
 .color__tag {
   display: flex;
   flex-direction: column;
@@ -504,8 +543,7 @@ line-height: normal;
 
 .days__time {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  gap: 20px;
 }
 
 .set__days {
@@ -523,4 +561,30 @@ line-height: normal;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+.reminder__btns {
+  display: flex;
+  gap: 20px;
+}
+
+.reminder__btns button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reminder__btns .cancel {
+  background: #f9f9f9;
+  color: #4f505e;
+  border: 1px solid #a8a9b4;
+}
+
+.reminder__btns .save {
+  background: #444fb7;
+  color: white;
+  border: none;
 }
