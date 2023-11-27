@@ -70,37 +70,48 @@ const card = [
   document.addEventListener("DOMContentLoaded", () => {
     const dashboardContent = document.querySelector(".dashboard");
     const reminderContent = document.querySelector(".reminder");
-    const messageContent = document.querySelector(".message");
+    const messageContent = document.querySelector(".messages");
     const caregiverContent = document.querySelector(".caregiver");
 
-    const anchorLinks = document.querySelectorAll("a[href='#'][href='#']");
+    const anchorLinks = document.querySelectorAll("a[href='#'][href='#'][href='#']");
     const cards = document.getElementById("cards");
 
     const cardTextStyle =
       "color: #4F505E; font-size: 20px; font-style: normal; font-weight: 500; line-height: normal;";
 
-    const hideAllContent = () => {
-      [dashboardContent, reminderContent, messageContent, caregiverContent].forEach(
-        (content) => (content.style.display = "none")
-      );
-    };
+      console.log(dashboardContent); // Check if dashboardContent is not null
+      console.log(reminderContent); // Check if reminderContent is not null
+      console.log(messageContent); // Check if messageContent is not null
+      console.log(caregiverContent); // Check if caregiverContent is not null
 
-    const showContent = (content) => {
-      hideAllContent();
-      content.style.display = "block";
-    };
+      const hideAllContent = () => {
+        [dashboardContent, reminderContent, messageContent, caregiverContent].forEach(
+          (content) => {
+            console.log(content); // Check if content is not null
+            content.style.display = "none";
+          }
+        );
+      };
+
+      const showContent = (content) => {
+        hideAllContent();
+        console.log(content); // Check if content is not null
+        content.style.display = "block";
+      };
+
 
     anchorLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        if (link.getAttribute("href") === "#") {
+        if (link.classList.contains("reminder_click")) {
           showContent(reminderContent);
-        } else if (link.getAttribute("href") === "#") {
+        } else if (link.classList.contains("messages_click")) {
           showContent(messageContent);
-        } else if (link.getAttribute("href") === "#") {
+        } else if (link.classList.contains("caregiver_click")) {
           showContent(caregiverContent);
         }
       });
     });
+
 
     card.forEach((item) => {
       cards.innerHTML += `

@@ -12,7 +12,7 @@
 
 body {
   font-family: var(--font-family);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background: var(--background);
   display: flex;
 }
@@ -51,6 +51,7 @@ body {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  cursor: pointer;
 }
 
 .sidebar button {
@@ -71,6 +72,20 @@ body {
 /* General styling for the dashboard content */
 
 .dashboard {
+  flex: 1;
+  padding-left: 250px;
+  transition: padding-left 0.5s ease;
+}
+
+.reminder {
+  flex: 1;
+  padding-left: 250px;
+  transition: padding-left 0.5s ease;
+}
+
+
+
+.messages {
   flex: 1;
   padding-left: 250px;
   transition: padding-left 0.5s ease;
@@ -346,9 +361,49 @@ body {
 
 /* Caregiver Dashboard */
 
+.caregiver {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 0 0 250px;
+  transition: padding 0.5s ease;
+  margin: 10% 4%;
+}
+.caregiver__header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 20px 250px;
+  border-top: 1px solid #e5e5e5;
+  margin-left: 5%;
+}
 .caregiver__header h2 {
-    color: #000;
-font-size: 20px;
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.caregiver__body .top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.caregiver__body label {
+  color: #000;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.caregiver__body form input::placeholder {
+  color: #969696;
+font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -358,56 +413,114 @@ line-height: normal;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .caregiver__body form .side {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .caregiver__body form .space {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .caregiver__body form input {
-    padding: 10px 20px;
-    border-radius: 8px;
-    outline: none;
-    border-radius: 4px;
-    border: 1px solid #a8a9b4;
-    background: #fff;
-    width: 100%;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #a8a9b4;
+  background: #fff;
+  width: 100%;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.caregiver__body form input::placeholder {
-    color: #969696;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+.caregiver__footer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 20px 20px 250px;
+  border-top: 1px solid #e5e5e5;
 }
 
-.caregiver__body form .top {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 16px;
+.caregiver__footer .cancel,
+.caregiver__footer .save {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-.caregiver__body form .top label {
-    color: #000;
-font-size: 16px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.caregiver__footer .cancel {
+  background: #f7f7fb;
+  color: #000;
+  border: none;
+}
+
+.caregiver__footer .save {
+  border-radius: 8px;
+  background: #4453b7;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Reminder dashboard styling */
+
+.reminder h2 {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.name__color {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reminder__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.color__tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.color__tag div {
+  display: inline-flex;
+}
+
+.days__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.set__days {
+  display: flex;
+  flex-direction: column;
+}
+
+.set__days .days {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.set__time .times {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 }

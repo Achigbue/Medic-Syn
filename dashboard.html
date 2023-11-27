@@ -16,15 +16,15 @@
         <ul>
           <li>
             <span><img src="./images/Time Square.png" alt="Time icon" /></span
-            ><a href="#" class="reminder_click"> Add Reminder</a>
+            ><a href="#" class="side reminder_click"> Add Reminder</a>
           </li>
           <li>
             <span><img src="./images/Message.png" alt="Time icon" /></span
-            ><a href="#" class="messages_click">My Messages</a>
+            ><a href="#" class="side messages_click">My Messages</a>
           </li>
           <li>
             <span><img src="./images/Plus.png" alt="Time icon" /></span
-            ><a href="#" class="caregiver_click">Add Caregiver</a>
+            ><a href="#" class="side caregiver_click">Add Caregiver</a>
           </li>
         </ul>
       </div>
@@ -113,11 +113,120 @@
 
     <div class="main reminder">
       <div class="header">
-        <h2 style="color: blue">New Reminder</h2>
+        <h2>New Reminder</h2>
+      </div>
+      <div>
+        <form action="">
+          <div class="name__color">
+            <div class="reminder__name">
+              <label for="name">Reminder Name</label>
+              <input type="text" placeholder="Give your reminder a name" />
+            </div>
+            <div class="color__tag">
+              <label for="colors">
+                Select color tag
+              </label>
+              <div>
+              <input type="radio">
+              <input type="radio">
+              <input type="radio">
+              <input type="radio">
+              <input type="radio">
+            </div>
+            </div>
+          </div>
+          <div class="days__time">
+            <div class="set__days">
+              <label for="days">Set days</label>
+              <div class="days">
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Mon</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Tue</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Wed</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Thu</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Fri</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Sat</p>
+                </div>
+                <div class="day">
+                  <input type="checkbox" />
+                  <p>Sun</p>
+                </div>
+              </div>
+            </div>
+            <div class="set__time">
+              <label for="times">Set Time</label>
+              <div class="times">
+                <select name="hour" id="hour">
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                </select>
+                <select name="minutes" id="minutes">
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                </select>
+                <select name="seconds" id="seconds">
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                  <option value="">1</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="pill_count">
+            <p>Pill Count</p>
+            <input type="text" placeholder="Enter total number of pills" />
+          </div>
+          <div class="reminder__description">
+            <p>Description</p>
+            <textarea
+              name="description"
+              id="description"
+              cols="30"
+              rows="10"
+              placeholder="Enter a brief description"
+            ></textarea>
+          </div>
+          <div class="reminder__btns">
+            <button class="cancel">Cancel</button>
+            <button class="save" style="border-radius: 4px; background: #444FB7; color: white; border: none;">Save</button>
+          </div>
+
+        </form>
       </div>
     </div>
 
-    <div class="main messages"></div>
+    <div class="main messages">
+      <div class="messages__header">
+        <h2>New Messages</h2>
+      </div>
+    </div>
 
     <div class="main caregiver">
       <div class="caregiver__header">
@@ -152,7 +261,7 @@
       </div>
       <div class="caregiver__footer">
         <button class="cancel">Cancel</button>
-        <button class="save">Save</button>
+        <button class="save" style="border-radius: 4px; background: #444FB7; color: white; border: none;">Save</button>
       </div>
     </div>
 
